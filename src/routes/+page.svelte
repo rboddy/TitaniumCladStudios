@@ -17,6 +17,12 @@
     :global(body){
         margin: 0;
         font-family: 'Roboto', sans-serif;
+        /* CSS HEX */
+        --black: #000000ff;
+        --violet-jtc: #502f4cff;
+        --chinese-violet: #70587cff;
+        --thistle: #c8b8dbff;
+        --snow: #f9f4f5ff;
     }
     .page-container {
         background: #000;
@@ -54,5 +60,15 @@
         margin: 0;
         font-size: 4rem;
         font-weight: bold;
+    }
+    @media(max-width: 480px){
+        .titanium-box {
+            width: 30vmax;
+            height: 30vmax;
+        }
+        .titanium-box:hover {
+            width: 31vmax;
+            height: 31vmax;
+        }
     }
 </style>
