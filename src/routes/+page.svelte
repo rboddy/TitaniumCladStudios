@@ -4,7 +4,7 @@
 
     function spin() {
         if(state){
-            gsap.to(".titanium-box", {rotation: 360, borderRadius: "90%", duration: 1});
+            gsap.to(".titanium-box", {rotation: 360, borderRadius: "45%", duration: 1});
         }
         else {
             gsap.to(".titanium-box", {rotation: -360, borderRadius: "0%", duration: 1});
