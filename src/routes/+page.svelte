@@ -1,13 +1,28 @@
+<script>
+
+    let state = true;
+
+    function spin() {
+        if(state){
+            gsap.to(".titanium-box", {rotation: 360, borderRadius: "90%", duration: 1});
+        }
+        else {
+            gsap.to(".titanium-box", {rotation: -360, borderRadius: "0%", duration: 1});
+        }
+        state = !state;
+    }
+</script>
+
 <div class="page-container">
-    <div class="titanium-box">
-        <div>
+    <div class="titanium-box" on:click={spin}>
+        <div class:display={!state}>
             <p>22</p>
             <p>47.867</p>
         </div>
-        <div>
+        <div class:display={!state}>
             <h1>Ti</h1>
         </div>
-        <div>
+        <div class:display={!state}>
             <p>Titanium</p>
         </div>
     </div>
@@ -32,22 +47,18 @@
         height: 100vh;
     }
     .titanium-box {
-        width: 30vmin;
-        height: 30vmin;
+        width: 32vmin;
+        height: 32vmin;
         background-color: #F9F4F5;
         display: grid;
         grid-template-rows: 1fr 2fr 1fr;
         padding: 2vmin;
         box-sizing: border-box;
-        border-radius: 5px;
         font-size: 20px;
         box-shadow: 0 0 50px 15px #70587C;
         color: #502F4C;
+        
     }
-    /* .titanium-box:hover {
-        width: 31vmin;
-        height: 31vmin;
-    } */
     .titanium-box > div {
         display: flex;
         justify-content: center;
@@ -55,6 +66,12 @@
     }
     .titanium-box > div:first-child {
         justify-content: space-between;
+    }
+    .titanium-box:hover {
+        cursor: pointer;
+    }
+    .display {
+        display: none !important;
     }
     h1 {
         margin: 0;
