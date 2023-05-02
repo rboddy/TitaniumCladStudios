@@ -44,10 +44,10 @@
         box-shadow: 0 0 50px 15px #70587C;
         color: #502F4C;
     }
-    .titanium-box:hover {
+    /* .titanium-box:hover {
         width: 31vmin;
         height: 31vmin;
-    }
+    } */
     .titanium-box > div {
         display: flex;
         justify-content: center;
